@@ -1,6 +1,4 @@
-# Flask-Landing
-
-Boilerplate project template for a simple landing page to collect prelaunch emails. Powered by Flask, of course. <3
+# AdvizzeYourself 
 
 ## QuickStart
 
