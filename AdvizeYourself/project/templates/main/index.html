@@ -1,0 +1,38 @@
+{% extends "_base.html" %}
+{% block title %} - Welcome{% endblock %}
+
+{% block content %}
+
+<div id="main">
+
+  <h1>Sign up today to stay updated.</h1>
+    <br>
+    <p>AdviseYourself.com is a website designed to take your financial planning into your own hands. We provide the tools you need to plan for your retirement, doublecheck your current investment portfolio, and keep tabs on your future.</p>
+    <br>
+
+  <form class="form-email" role="form" method="post" action="/">
+    {{ form.csrf_token }}
+    <p>
+    {{ form.email.label }}
+    <br>
+    {{ form.email(placeholder="email@address.com") }}
+	<br>
+	<br>
+    {{ form.password(placeholder="Password") }}
+	<br>
+	<br>
+    {{ form.confirm(placeholder="Confirm Password") }}
+    <span class="error">
+      {% if form.email.errors %}
+        {% for error in form.email.errors %}
+          {{ error }}
+        {% endfor %}
+      {% endif %}
+    </span>
+    </p>
+    <button class="btn btn-success btn-sm" type="submit">Submit!</button>
+  </form>
+
+</div>
+
+{% endblock %}
