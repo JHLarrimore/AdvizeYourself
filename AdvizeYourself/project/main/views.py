@@ -40,5 +40,6 @@ def index():
             db.session.commit()
 
             flash('Thank you for your interest!', 'success')
+            #Send to RetirementInfo page to gather info
             return redirect(url_for('main.index'))
     return render_template('main/index.html', form=form)

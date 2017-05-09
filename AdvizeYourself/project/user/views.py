@@ -72,9 +72,13 @@ def retirementCalc():
             "yearlyContributions":userinfo.yearlyContributions,
             "age_at_retire":userinfo.age_at_retire,
             "dob":userinfo.dob}
-    
-    fv1 = RetirementCalc(info, 0.05)
-    fv2 = RetirementCalc(info, 0.07)
-    fv3 = RetirementCalc(info, 0.10)
+    dataset = []
+    dataset.append(RetirementCalc(info, 0.05))
+    dataset.append(RetirementCalc(info, 0.07))
+    dataset.append(RetirementCalc(info, 0.10))
+    # fv1 = RetirementCalc(info, 0.05)
+    # fv2 = RetirementCalc(info, 0.07)
+    # fv3 = RetirementCalc(info, 0.10)
+    #Send to Graph
     return render_template('user/retirementCalc.html')
     
